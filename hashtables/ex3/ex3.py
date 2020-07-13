@@ -1,10 +1,18 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+  obj={}
+  result=[]
+  for i in range(len(arrays)):
+    for j in range(len(arrays[i])):
+      if arrays[i][j] not in obj:
+        obj[arrays[i][j]]=1
+      else:
+        obj[arrays[i][j]]=obj[arrays[i][j]]+1
 
-    return result
+      if obj[arrays[i][j]]==len(arrays):
+        result.append(arrays[i][j])
+    
+
+  return result
 
 
 if __name__ == "__main__":
